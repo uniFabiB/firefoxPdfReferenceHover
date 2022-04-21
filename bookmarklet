@@ -17,9 +17,10 @@ async()=>{
         e.pdfDocument.getPage(l).then(function(t){
         
             let myheightscale = 0.25;
+            let myzoomscale = 1;
             let myheightoffset = 12;
             
-            const r=t.getViewport({scale:1}), o=myheightscale*r.height*e.pdfViewer.currentScale, a=r.width*e.pdfViewer.currentScale, p=n.clientX>i?2*a/3:a/3;
+            const r=t.getViewport({scale:1}), o=myzoomscale*myheightscale*r.height*e.pdfViewer.currentScale, a=myzoomscale*r.width*e.pdfViewer.currentScale, p=n.clientX>i?2*a/3:a/3;
             
             let l;
             switch(s.height=`${o}px`, s.width=`${a}px`, s.left=`${n.clientX-p-4}px`,d[1].name){
