@@ -16,8 +16,8 @@ async()=>{
         const p=decodeURIComponent(o.substring(1)),d=p in r?r[p]:JSON.parse(p), l=e.pdfLinkService._cachedPageNumber(d[0]);
         e.pdfDocument.getPage(l).then(function(t){
         
-            let myheightscale = 0.5;
-            let myheightoffset = 27;
+            let myheightscale = 0.25;
+            let myheightoffset = 12;
             
             const r=t.getViewport({scale:1}), o=myheightscale*r.height*e.pdfViewer.currentScale, a=r.width*e.pdfViewer.currentScale, p=n.clientX>i?2*a/3:a/3;
             
