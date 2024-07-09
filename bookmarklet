@@ -13,7 +13,7 @@ async()=>{
         
         s.border="1px solid black", s.direction="ltr", s.position="fixed", s.zIndex="2", s.top=`${n.clientY+4}px`, s.boxShadow="1px 1px 1px black, 1px 1px 1px black";
     
-        const p=decodeURIComponent(o.substring(1)),d=p in r?r[p]:JSON.parse(p), l=e.pdfLinkService.cachedPageNumber(d[0]);
+        const p=decodeURIComponent(o.substring(1)),d=p in r?r[p]:JSON.parse(p), l=e.pdfDocument.cachedPageNumber(explicitDest[0]);
         e.pdfDocument.getPage(l).then(function(t){
         
             let myheightscale = 0.25;
